@@ -13,12 +13,12 @@ export default (env) => {
   return {
     mode: env.mode ?? "development",
     entry: {
-      main: ["@babel/polyfill", path.resolve(__dirname, "example-path")],
+      main: ["@babel/polyfill", path.resolve(__dirname, "./src/index-entry.js")],
     },
     plugins: [
       new HtmlWebpackPlugin({
         filename: 'index.html',
-        template: path.resolve(__dirname, "example-path"),
+        template: path.resolve(__dirname, "./src/index.html"),
         chunks: ['main'],
       }),
       new MiniCssExtractPlugin({
