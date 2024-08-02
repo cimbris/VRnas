@@ -1,5 +1,22 @@
 @import "./vars.scss";
+@import "./header.scss";
 
+// =======================fonts
+@font-face {
+    font-family: "Chakra Petch", sans-serif;
+    src: url("../fonts/ChakraPetch-Light.ttf") format("ttf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Chakra Petch", sans-serif;
+    src: url("../fonts/ChakraPetch-Medium.ttf") format("ttf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+// ==================basic style
 .container {
     max-width: 1440px;
     margin: 0 auto;
