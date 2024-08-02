@@ -17,8 +17,25 @@
 }
 
 // ==================basic style
+body {
+    background-color: $black100;
+}
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+input,
+button {
+    border: none;
+}
+
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
