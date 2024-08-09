@@ -3,23 +3,32 @@
 @import "./action-link.scss";
 
 // =======================fonts
-@font-face {
-    font-family: "Chakra Petch", sans-serif;
-    src: url("../fonts/ChakraPetch-Light.ttf") format("ttf");
-    font-weight: 300;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: "Chakra Petch", sans-serif;
+//     src: url("./src/fonts/ChakraPetch-Light.ttf") format("ttf");
+//     font-weight: 300;
+//     font-style: normal;
+// }
 
-@font-face {
-    font-family: "Chakra Petch", sans-serif;
-    src: url("../fonts/ChakraPetch-Medium.ttf") format("ttf");
-    font-weight: 500;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: "Chakra Petch", sans-serif;
+//     src: url(".//src/fonts/ChakraPetch-Medium.ttf") format("ttf");
+//     font-weight: 500;
+//     font-style: normal;
+// }
 
 // ==================basic style
 body {
     background-color: $black100;
+    margin: 0;
+    padding: 0;
+}
+
+* > *,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
