@@ -15,7 +15,20 @@
         display: flex;
         gap: 64px;
     }
+
     &__item {
+        position: relative;
+    }
+
+    &__item.active {
+        .sublist-wrapper--page {
+            height: 141px;
+            bottom: -150px;
+        }
+        .sublist-wrapper--blog {
+            height: 110px;
+            bottom: -120px;
+        }
     }
 }
 
@@ -25,6 +38,7 @@
     font-family: "Chakra Petch", sans-serif;
     background: transparent;
     font-size: 16px;
+    line-height: 1.4;
 }
 
 .wave {
@@ -34,4 +48,32 @@
     width: 736px;
     height: 353.2px;
     z-index: -1;
+}
+
+.sublist-wrapper {
+    height: 0;
+    overflow: hidden;
+    min-width: 200px;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    transition: height 300ms;
+}
+
+.sublist {
+    padding: 15px;
+    border: 1px solid;
+    border-image: linear-gradient(
+        90deg,
+        rgba(176, 176, 178, 0.6) 20%,
+        rgba(176, 176, 178, 0) 100%
+    );
+    border-image-slice: 1;
+    background-color: $black50;
+    justify-content: space-between;
+    height: 99%;
+
+    &__item:not(:last-child) {
+        margin-bottom: 8px;
+    }
 }
