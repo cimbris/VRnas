@@ -29,16 +29,34 @@
             height: 110px;
             bottom: -120px;
         }
+        .anchor-link--add::after {
+            transform: translateY(-50%) rotateX(180deg);
+        }
     }
 }
 
 .anchor-link {
+    position: relative;
     font-weight: 500;
     color: $white;
     font-family: "Chakra Petch", sans-serif;
     background: transparent;
     font-size: 16px;
     line-height: 1.4;
+    cursor: pointer;
+
+    &--add::after {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: url(../img/arrow.svg) no-repeat center / contain;
+        position: absolute;
+        right: -27px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 300ms;
+    }
 }
 
 .wave {
