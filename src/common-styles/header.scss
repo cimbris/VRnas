@@ -23,11 +23,11 @@
     &__item.active {
         .sublist-wrapper--page {
             height: 141px;
-            bottom: -150px;
+            // bottom: -150px;
         }
         .sublist-wrapper--blog {
             height: 110px;
-            bottom: -120px;
+            // bottom: -120px;
         }
         .anchor-link--add::after {
             transform: translateY(-50%) rotateX(180deg);
@@ -70,11 +70,12 @@
 
 .sublist-wrapper {
     height: 0;
-    overflow: hidden;
     min-width: 200px;
     position: absolute;
-    left: 0;
+    left: -30px;
+    top: 40px;
     z-index: 2;
+    overflow: hidden;
     transition: height 300ms;
 }
 
