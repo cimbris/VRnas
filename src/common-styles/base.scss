@@ -2,26 +2,14 @@
 @import "./header.scss";
 @import "./action-link.scss";
 
-// =======================fonts
-// @font-face {
-//     font-family: "Chakra Petch", sans-serif;
-//     src: url("./src/fonts/ChakraPetch-Light.ttf") format("ttf");
-//     font-weight: 300;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: "Chakra Petch", sans-serif;
-//     src: url(".//src/fonts/ChakraPetch-Medium.ttf") format("ttf");
-//     font-weight: 500;
-//     font-style: normal;
-// }
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 // ==================basic style
 body {
     background-color: $black100;
     margin: 0;
     padding: 0;
+    font-family: "Chakra Petch", system-ui;
 }
 
 * > *,
@@ -52,4 +40,11 @@ li {
 
 a {
     text-decoration: none;
+}
+
+.main-text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.75;
+    color: $grey2;
 }
