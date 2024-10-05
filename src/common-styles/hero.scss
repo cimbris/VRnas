@@ -1,7 +1,14 @@
 .hero {
-    position: relative;
+    max-width: 540px;
 
     &__desc {
-        position: absolute;
+    }
+
+    .main-title {
+        margin-bottom: 12px;
+    }
+
+    .main-text {
+        max-width: 446px;
     }
 }
