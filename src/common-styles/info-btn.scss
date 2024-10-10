@@ -1,0 +1,45 @@
+@import "./vars.scss";
+
+.info-btn {
+    position: relative;
+    padding: 18px 38px;
+    display: inline-block;
+    background: $gradient;
+    font-weight: 700;
+    font-size: 14px;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        z-index: -1;
+        transform: translateY(-50%);
+        width: 115px;
+        height: 40px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        border-radius: 10px;
+    }
+
+    &:after {
+        right: 0;
+        box-shadow: 0 0 35px 3px $purple;
+    }
+
+    &:before {
+        left: 0;
+        box-shadow: 0 0 35px 3px $blue;
+    }
+
+    &:hover {
+        &:after,
+        &:before {
+            opacity: 1;
+        }
+    }
+}
