@@ -82,27 +82,34 @@
     }
 }
 
-// .net {
-//     width: 2682px;
-//     height: 721px;
-//     z-index: -1;
-//     position: fixed;
-//     left: -1585px;
-// }
-
-.video-wrapper {
-}
-.video-background {
+.video {
     width: 196px;
     height: 128px;
     background-color: #21232e;
     position: relative;
-}
-.video-preview {
-    width: 123px;
-    height: 123px;
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+
+    &__preview {
+        display: block;
+        margin: 0 auto;
+        transition: transform 0.5s;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.3s;
+    }
+
+    &:hover {
+        .video__preview {
+            transform: scale(1.1);
+        }
+        .video__btn {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+    }
 }
