@@ -61,6 +61,7 @@
         color: $grey2;
         font-weight: 300;
         font-size: 16px;
+        margin-right: 75px;
 
         span {
             font-weight: 600;
@@ -80,6 +81,28 @@
         }
     }
 }
-// .video{
-//     border: 4px #ffff;
+
+// .net {
+//     width: 2682px;
+//     height: 721px;
+//     z-index: -1;
+//     position: fixed;
+//     left: -1585px;
 // }
+
+.video-wrapper {
+}
+.video-background {
+    width: 196px;
+    height: 128px;
+    background-color: #21232e;
+    position: relative;
+}
+.video-preview {
+    width: 123px;
+    height: 123px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+}
