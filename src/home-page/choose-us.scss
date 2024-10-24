@@ -1,18 +1,44 @@
+@import "../common-styles/vars.scss";
+
 .choose-us {
     &__content {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: $black50;
+        border: 1px solid;
+        border-image: linear-gradient(
+            90deg,
+            rgba(176, 176, 178, 0.6) 20%,
+            rgba(176, 176, 178, 0) 100%
+        );
+        border-image-slice: 1;
+        padding: 42px 64px 53px;
     }
 }
 
 .reasons-list {
+    display: flex;
+    gap: 50px;
+
     &__item {
     }
 }
 
 .reason-card {
     &__img {
+        margin-bottom: 42px;
     }
     &__title {
+        margin-bottom: 12px;
+        color: $white;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.2;
     }
     &__text {
+        color: $grey1;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 2;
     }
 }
