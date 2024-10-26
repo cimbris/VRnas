@@ -5,3 +5,4 @@ import "./common-styles/hero.scss";
 import "./common-styles/preview.scss";
 import "./common-styles/info-btn.scss";
 import "./home-page/choose-us.scss";
+import "./home-page/about-us.scss";

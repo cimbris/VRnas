@@ -16,6 +16,15 @@
         display: flex;
         justify-content: space-between;
     }
+
+    .video:hover {
+        .video__preview {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        .video__btn {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+    }
 }
 
 .reviews {
@@ -92,8 +101,11 @@
 
     &__preview {
         display: block;
-        margin: 0 auto;
         transition: transform 0.5s;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.05);
     }
 
     &__btn {
@@ -102,15 +114,6 @@
         left: 50%;
         transform: translate(-50%, -50%);
         transition: transform 0.3s;
-    }
-
-    &:hover {
-        .video__preview {
-            transform: scale(1.1);
-        }
-        .video__btn {
-            transform: translate(-50%, -50%) scale(1.2);
-        }
     }
 }
 
@@ -123,7 +126,7 @@
     &:before {
         content: "";
         position: absolute;
-        z-index: 1;
+        z-index: -1;
         top: 60%;
         left: 50%;
         width: 100%;
