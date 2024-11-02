@@ -2,14 +2,16 @@
 
 .about-us {
     &__content {
-        max-width: 1184px;
+        max-width: 1160px;
         margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
     }
 
     &__preview {
         display: flex;
         position: relative;
-        width: 518px;
+        width: 542px;
         height: 622px;
 
         &:after {
@@ -43,13 +45,27 @@
         }
     }
 
+    &__desc {
+        max-width: 562px;
+        padding-top: 81px;
+    }
+
     &__avatar {
+    }
+
+    .section-subtitle {
+        margin-bottom: 12px;
+    }
+
+    .section-text {
+        max-width: 528px;
+        margin-bottom: 24px;
     }
 }
 .about-us .video {
     position: absolute;
     bottom: -22px;
-    right: 15px;
+    right: 31px;
 
     &__preview {
         transform: translate(-50%, -50%) scale(0.8);
@@ -62,5 +78,30 @@
         .video__btn {
             transform: translate(-50%, -50%) scale(1.2);
         }
+    }
+}
+
+.adv-list {
+    margin-bottom: 32px;
+}
+
+.adv-list__item {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.75;
+    color: $white;
+
+    &:not(:last-child) {
+        padding-bottom: 14px;
+    }
+
+    &::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        margin-right: 12px;
+        background-image: url(../img/main-page/check-box.svg);
     }
 }
