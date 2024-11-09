@@ -1,0 +1,50 @@
+@import "../common-styles/vars.scss";
+
+.our-service {
+    position: relative;
+    .section-text {
+        max-width: 625px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 60%;
+        right: 0;
+        width: 28.125rem;
+        height: 12.5rem;
+        background: linear-gradient(
+            98.54deg,
+            rgba(28, 196, 249, 0.8) 0.72%,
+            rgba(254, 105, 254, 0.8) 90.69%
+        );
+        filter: blur(105px);
+        border-radius: 88% 12% 88% 12% / 20% 37% 63% 80%;
+        transform: translate(-50%, -50%) rotate(-30deg);
+    }
+}
+
+.our-service__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+.our-service__header {
+    margin: 0 auto;
+    max-width: 1158px;
+    display: flex;
+    justify-content: space-between;
+}
+.our-service__titles {
+    .section-title {
+    }
+    .section-subtitle {
+    }
+}
+.service-card-list {
+}
+.service-card-list__item {
+}
+.service-card {
+}
