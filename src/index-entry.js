@@ -11,3 +11,4 @@ import "./home-page/service.scss";
 import "./common-styles/accordeon.scss";
 import "./common-scripts/accordeon.js";
 import "./home-page/advantages.scss";
+import "./home-page/get-started.scss";

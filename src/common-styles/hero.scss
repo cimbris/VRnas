@@ -17,6 +17,10 @@
         justify-content: space-between;
     }
 
+    &__desc {
+        margin-bottom: 42px;
+    }
+
     .video:hover {
         .video__preview {
             transform: translate(-50%, -50%) scale(1.1);
