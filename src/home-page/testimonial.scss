@@ -1,0 +1,27 @@
+@import "../common-styles/vars.scss";
+
+.testimonial {
+    &__content {
+        position: relative;
+        background-image: url(../img/main-page/TESTIMONIAL.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 1247px;
+    }
+
+    &__header {
+        padding-top: 111px;
+        text-align: center;
+
+        .section-title {
+        }
+        .section-subtitle {
+        }
+    }
+
+    &__avatar {
+        position: absolute;
+        top: 27.9%;
+        left: 28.6%;
+    }
+}

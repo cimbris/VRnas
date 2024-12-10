@@ -2,6 +2,7 @@
 
 .get-started {
     padding-bottom: 100px;
+    position: relative;
 
     &__content {
         display: flex;
@@ -33,7 +34,7 @@
         position: absolute;
         z-index: -1;
         left: 12%;
-        bottom: 600px;
+        top: 40px;
         width: 28.125rem;
         height: 12.5rem;
         background: linear-gradient(
