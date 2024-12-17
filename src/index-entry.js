@@ -13,3 +13,4 @@ import "./common-scripts/accordeon.js";
 import "./home-page/advantages.scss";
 import "./home-page/get-started.scss";
 import "./home-page/testimonial.scss";
+import "./home-page/heads.scss";
