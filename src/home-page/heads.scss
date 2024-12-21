@@ -3,6 +3,32 @@
 .head-list {
 }
 .head-list__item {
+    position: absolute;
+
+    &--agung {
+        left: 47%;
+        top: 70%;
+    }
+    &--aldo {
+        top: 20%;
+        left: 59%;
+    }
+    &--arli {
+        top: 49%;
+        left: 79%;
+    }
+    &--bayu {
+        top: 24%;
+        left: 8%;
+    }
+    &--beni {
+        top: 77%;
+        left: 19%;
+    }
+    &--bondan {
+        top: 89%;
+        left: 71%;
+    }
 }
 
 .button-testimonial {
