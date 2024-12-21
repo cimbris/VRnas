@@ -23,5 +23,23 @@
         position: absolute;
         top: 27.9%;
         left: 28.6%;
+
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: 60%;
+            left: 50%;
+            width: 90%;
+            height: 50%;
+            background: linear-gradient(
+                98.54deg,
+                rgba(28, 196, 249, 0.8) 0.72%,
+                rgba(254, 105, 254, 0.8) 90.69%
+            );
+            filter: blur(80px);
+            border-radius: 88% 12% 88% 12% / 20% 37% 63% 80%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+        }
     }
 }
