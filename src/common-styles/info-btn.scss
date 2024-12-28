@@ -13,32 +13,24 @@
     letter-spacing: 1.5px;
     cursor: pointer;
 
-    &:after,
-    &:before {
+    &::before {
         content: "";
         position: absolute;
-        top: 50%;
-        z-index: -1;
-        transform: translateY(-50%);
-        width: 115px;
-        height: 40px;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        border-radius: 10px;
-    }
-
-    &:after {
+        top: 0;
         right: 0;
-        box-shadow: 0 0 35px 3px $purple;
-    }
-
-    &:before {
-        left: 0;
-        box-shadow: 0 0 35px 3px $blue;
+        top: -5px;
+        right: -5px;
+        bottom: -5px;
+        left: -5px;
+        transform: translate(8px, 5px);
+        z-index: -1;
+        background: $gradient;
+        filter: blur(20px);
+        transition: 0.4s;
+        opacity: 0;
     }
 
     &:hover {
-        &:after,
         &:before {
             opacity: 1;
         }

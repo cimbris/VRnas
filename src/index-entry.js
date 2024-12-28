@@ -15,3 +15,4 @@ import "./home-page/get-started.scss";
 import "./home-page/testimonial.scss";
 import "./home-page/heads.scss";
 import "./common-scripts/heads.js";
+import "./home-page/pricing.scss";
