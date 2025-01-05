@@ -16,3 +16,5 @@ import "./home-page/testimonial.scss";
 import "./home-page/heads.scss";
 import "./common-scripts/heads.js";
 import "./home-page/pricing.scss";
+import "./home-page/partners.scss";
+import "./common-styles/keyframes.scss";

@@ -1,0 +1,131 @@
+@import "../common-styles/vars.scss";
+@import "../common-styles/keyframes.scss";
+
+.partners {
+    &__content {
+    }
+    &__header {
+        max-width: 866px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 58px;
+        text-align: center;
+
+        .section-title {
+            width: 100%;
+            text-align: center;
+        }
+        .section-subtitle {
+            width: 100%;
+        }
+    }
+    &__main {
+        height: 741px;
+        background-image: url(../img/partners/partners-back.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+    }
+
+    &__avatar {
+        position: absolute;
+        top: 185px;
+        z-index: 2;
+        left: 350px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 60%;
+            left: 50%;
+            width: 70%;
+            height: 50%;
+            background: linear-gradient(
+                98.54deg,
+                rgba(28, 196, 249, 0.8) 0.72%,
+                rgba(254, 105, 254, 0.8) 90.69%
+            );
+            filter: blur(105px);
+            border-radius: 88% 12% 88% 12% / 20% 37% 63% 80%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+        }
+    }
+}
+
+.company {
+}
+
+.company__item {
+    position: absolute;
+
+    &--fcb {
+        top: 63%;
+        left: 14%;
+
+        .company-logo {
+            animation: bouncing ease 10s infinite;
+        }
+    }
+    &--pbi {
+        top: 37%;
+        left: 16%;
+
+        .company-logo {
+            animation: bouncing ease 9s infinite;
+        }
+    }
+    &--wazzup {
+        top: 12%;
+        left: 29%;
+
+        .company-logo {
+            animation: bouncing ease 11s infinite;
+        }
+    }
+    &--ig {
+        top: 3%;
+        left: 46.5%;
+
+        .company-logo {
+            animation: bouncing ease 12s infinite;
+        }
+    }
+    &--mall {
+        top: 12%;
+        left: 63%;
+
+        .company-logo {
+            animation: bouncing ease 9s infinite;
+        }
+    }
+    &--pulse {
+        top: 37%;
+        left: 75%;
+
+        .company-logo {
+            animation: bouncing ease 11s infinite;
+        }
+    }
+    &--uni {
+        top: 63%;
+        left: 79%;
+
+        .company-logo {
+            animation: bouncing ease 10s infinite;
+        }
+    }
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 102px;
+    height: 102px;
+    border-radius: 50%;
+    background-image: url(../img/partners/logo-circle.svg);
+}
+
+.company-logo__img {
+}
