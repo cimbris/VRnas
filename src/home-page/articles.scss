@@ -3,6 +3,8 @@
 .articles {
     .articles__content {
         position: relative;
+        padding: 150px 0;
+        min-height: 1068px;
     }
     .articles__header {
         display: flex;
@@ -37,7 +39,21 @@
         rgba(176, 176, 178, 0) 100%
     );
     border-image-slice: 1;
+
     .recent-articles__list {
+        max-height: 504px;
+        overflow-y: auto;
+        padding-right: 46px;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #6a6a6b4f;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $white;
+        }
     }
     .recent-articles__list-item {
     }
@@ -51,11 +67,18 @@
 
     .article-card__wrapper-img {
         margin-right: 21px;
+        width: 142px;
+        height: 91px;
     }
     .article-card__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     .article-card__text {
         margin-right: 13px;
+        width: 100%;
+        max-width: 297px;
     }
     .article-card__title {
         display: inline-block;
@@ -76,7 +99,7 @@
     }
 }
 .action-link--arrow {
-    width: 60px;
+    width: 40px;
     height: 40px;
     position: relative;
 
