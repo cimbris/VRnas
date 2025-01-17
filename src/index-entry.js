@@ -19,3 +19,4 @@ import "./home-page/pricing.scss";
 import "./home-page/partners.scss";
 import "./common-styles/keyframes.scss";
 import "./home-page/articles.scss";
+import "./common-scripts/slider.js";
