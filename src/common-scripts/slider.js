@@ -28,15 +28,21 @@ class Slider {
 
     #arrowsCreator() {
         const leftArrow = document.createElement("button");
+        leftArrow.classList.add(...["arrow", "arrow-left"]);
+
         const rightArrow = document.createElement("button");
+        rightArrow.classList.add(...["arrow", "arrow-right"]);
+
         return { leftArrow, rightArrow };
     }
 
     #paginationCreator() {
         const paginationWrapper = document.createElement("div");
+        paginationWrapper.classList.add("pagination-wrapper");
 
         for (let i = 0; i < this.sliderAmount; i++) {
             const paginationBtn = document.createElement("button");
+            paginationBtn.classList.add("pagination-btn");
             paginationWrapper.append(paginationBtn);
         }
 
