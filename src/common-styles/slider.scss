@@ -1,9 +1,25 @@
 .slider {
-    height: 250px;
+    // height: 250px;
     width: 450px;
     background-color: red;
     position: relative;
 }
+
+.wrapper-hidden {
+    overflow: hidden;
+}
+
+.lenta {
+    display: flex;
+    transition: 400ms;
+}
+
+.slide {
+    height: 250px;
+    min-width: 100%;
+    background-color: beige;
+}
+
 .pagination-btn {
     width: 10px;
     height: 10px;
