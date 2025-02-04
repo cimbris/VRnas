@@ -4,6 +4,7 @@ class Slider {
     sliderAmount = 0;
     currentSlideCounter = 0;
     currentSlideWidth = 0;
+    paginationList = null;
 
     constructor() {}
 
@@ -19,6 +20,9 @@ class Slider {
         const paginationWrapper = this.#paginationCreator();
         this.sliderElement.append(paginationWrapper);
 
+        this.paginationList =
+            this.sliderElement.querySelectorAll("[data-pagination]");
+
         this.#eventHandler();
     }
 
@@ -26,6 +30,12 @@ class Slider {
         this.sliderElement.addEventListener("click", (e) => {
             const isRightArrow = e.target.closest('[data-arrow="right"]');
             const isLeftArrow = e.target.closest('[data-arrow="left"]');
+            const isPaginationBtn = e.target.closest("[data-pagination]");
+
+            if (isPaginationBtn) {
+                this.#pagination(isPaginationBtn);
+                this.#slideMotion();
+            }
 
             if (isRightArrow) {
                 this.#directionChoice("right");
@@ -33,6 +43,14 @@ class Slider {
                 this.#directionChoice("left");
             }
         });
+    }
+
+    #pagination(btn) {
+        const paginationArray = Array.from(this.paginationList);
+        const btnIndex = paginationArray.indexOf(btn);
+        this.currentSlideCounter = btnIndex;
+
+        return paginationArray;
     }
 
     #slideMotion() {
@@ -85,6 +103,7 @@ class Slider {
         for (let i = 0; i < this.sliderAmount; i++) {
             const paginationBtn = document.createElement("button");
             paginationBtn.classList.add("pagination-btn");
+            paginationBtn.setAttribute("data-pagination", "");
             paginationWrapper.append(paginationBtn);
         }
 
