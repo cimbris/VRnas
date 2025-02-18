@@ -25,6 +25,10 @@
     height: 10px;
     background-color: aqua;
     border-radius: 50%;
+
+    &.active {
+        background-color: blue;
+    }
 }
 .pagination-wrapper {
     display: flex;

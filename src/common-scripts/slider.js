@@ -5,8 +5,14 @@ class Slider {
     currentSlideCounter = 0;
     currentSlideWidth = 0;
     paginationList = null;
+    startPoint = 0;
+    endPoint = 0;
+    minMove = 50;
 
-    constructor() {}
+    constructor() {
+        // this.startHandler = this.startHandler.bind(this);
+        // this.endHandler = this.endHandler.bind(this);
+    }
 
     _initial(selector) {
         this.sliderElement = document.querySelector(selector);
@@ -43,11 +49,48 @@ class Slider {
                 this.#directionChoice("left");
             }
         });
+
+        this.sliderElement.addEventListener("mousedown", (e) =>
+            this.startHandler(e)
+        );
+        this.sliderElement.addEventListener("mouseup", (e) =>
+            this.endHandler(e)
+        );
+    }
+    swipe() {
+        const currentMove = this.startPoint - this.endPoint;
+        if (Math.abs(currentMove) > this.minMove) {
+            if (currentMove > 0) {
+                this.#directionChoice("right");
+            } else {
+                this.#directionChoice("left");
+            }
+        }
+    }
+
+    startHandler(e) {
+        this.startPoint = e.clientX;
+    }
+
+    endHandler(e) {
+        this.endPoint = e.clientX;
+        this.swipe();
+    }
+
+    #styleHandler(btnIndex) {
+        const activeBtn = this.paginationList[btnIndex];
+
+        for (let i = 0; i < this.paginationList.length; i++) {
+            this.paginationList[i].classList.remove("active");
+        }
+
+        activeBtn.classList.add("active");
     }
 
     #pagination(btn) {
         const paginationArray = Array.from(this.paginationList);
         const btnIndex = paginationArray.indexOf(btn);
+
         this.currentSlideCounter = btnIndex;
 
         return paginationArray;
@@ -55,6 +98,8 @@ class Slider {
 
     #slideMotion() {
         this.lenta.style.transform = `translateX(-${this.currentSlideCounter * this.currentSlideWidth}px)`;
+
+        this.#styleHandler(this.currentSlideCounter);
     }
 
     #directionChoice(direction) {
@@ -102,6 +147,10 @@ class Slider {
 
         for (let i = 0; i < this.sliderAmount; i++) {
             const paginationBtn = document.createElement("button");
+
+            if (i === 0) {
+                paginationBtn.classList.add("active");
+            }
             paginationBtn.classList.add("pagination-btn");
             paginationBtn.setAttribute("data-pagination", "");
             paginationWrapper.append(paginationBtn);
